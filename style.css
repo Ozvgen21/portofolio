@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f5f5f5;
+}
+
+.container {
+    flex: 1;
+    padding: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-toggle:hover {
+    filter: blur(5px);
+    transition-property: filter;
+    transition-duration: 1.5s;
+}
+
+.sidebar {
+    display: none;
+   position: fixed;
+   top: 0;
+   right: 0;
+   height: 100vmax;
+   width: 50px;
+   z-index: 999;
+   background-color: #f5f5f5;
+   box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+.close-toggle {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.close-toggle:hover {
+    filter: blur(5px);
+    transition-property: filter;
+    transition-duration: 1.5s;
+}
+
+.sidebar ul {
+    display: flex;
+   flex-direction: column;
+   position: relative;
+   margin-top: 100px;
+   margin-left: -15px;
+}
+
+.sidebar ul li {
+    list-style: none;
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile .text {
+    max-width: 500px;
+}
+
+.profile .text h2 {
+    font-size: 16px;
+    color: #666;
+}
+
+.profile .text h3 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.profile .text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+    margin-right: 40px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid #333;
+    color: #333;
+}
+
+.btn.primary {
+    background: #333;
+    color: white;
+}
+
+.image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.image img:hover {
+    filter: none;
+    transition-property: filter;
+    transition-duration: 1.5s;
+}
+
+.notes {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.p {
+    color: #2c2c2c;
+    text-decoration: none;
+}
