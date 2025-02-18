@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f5f5f5;
+}
+
+.container {
+    flex: 1;
+    padding: 30px;
+    margin: 0 auto; /* Tambahkan margin otomatis untuk menyeimbangkan tampilan */
+    max-width: 1200px; /* Batasi lebar maksimum container */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+}
+
+.menu-toggle:hover {
+    filter: blur(5px);
+    transition-property: filter;
+    transition-duration: 1.5s;
+}
+
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vmax;
+    width: 50px;
+    z-index: 999;
+    background-color: #f5f5f5;
+    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-toggle {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.close-toggle:hover {
+    filter: blur(5px);
+    transition-property: filter;
+    transition-duration: 1.5s;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 100px;
+    margin-left: -15px;
+}
+
+.sidebar ul li {
+    list-style: none;
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center; /* Pastikan elemen sejajar secara vertikal */
+    justify-content: center; /* Pusatkan elemen secara horizontal */
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Pusatkan teks */
+}
+
+.profile .text {
+    max-width: 400px;
+    text-align: left; /* Ubah text-align menjadi left */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Pastikan elemen dalam text sejajar secara vertikal */
+}
+
+.profile .text h2 {
+    font-size: 16px;
+    color: #666;
+}
+
+.profile .text h3 {
+    font-size: 40px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center; /* Pastikan elemen h3 dan img sejajar secara vertikal */
+}
+
+.profile .text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+    margin-right: 40px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid #333;
+    color: #333;
+}
+
+.btn.primary {
+    background: #333;
+    color: white;
+}
+
+.image {
+    order: 2; /* Urutan kedua pada desktop */
+    margin-left: 20px; /* Tambahkan margin kiri untuk memberi jarak */
+    margin-right: 20px; /* Tambahkan margin kanan untuk memberi jarak */
+}
+
+.image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.image img:hover {
+    filter: none;
+    transition-property: filter;
+    transition-duration: 1.5s;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    justify-content: center;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.projects .text2 {
+    max-width: 400px;
+    text-align: center;
+}
+
+.projects .text2 h2 {
+    font-size: 16px;
+    color: #666;
+}
+
+.projects .text2 h3 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.projects .text2 p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.buttons2 {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Tambahkan margin-top untuk memberi jarak dari galeri */
+}
+
+.btn-scnd {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid #333;
+    color: white;
+    background: #333;
+    margin: 0 auto;
+}
+
+.gallery {
+    margin-top: 40px;
+    padding: 40px; /* Sesuaikan padding dengan section lainnya */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Pastikan galeri memiliki lebar penuh */
+}
+
+.gallery h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: row; /* Default tata letak menjadi horizontal */
+    gap: 15px;
+    padding-bottom: 10px;
+    width: 100%; /* Pastikan container memiliki lebar penuh */
+    overflow-x: auto; /* Tambahkan overflow-x untuk scroll horizontal */
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+    width: 300px; /* Sesuaikan ukuran item galeri */
+    height: 200px; /* Sesuaikan ukuran item galeri */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Media queries untuk tampilan mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .profile {
+        padding: 20px;
+        flex-direction: column; /* Ubah urutan elemen menjadi kolom */
+    }
+
+    .profile .text {
+        order: 2; /* Urutan kedua */
+        text-align: center; /* Ubah text-align menjadi center */
+    }
+
+    .profile .image {
+        order: 1; /* Urutan pertama */
+        margin-left: 0; /* Hapus margin kiri pada tampilan mobile */
+        margin-bottom: 20px; /* Tambahkan margin bawah untuk memberi jarak */
+    }
+
+    .profile .text p {
+        margin-right: 0;
+    }
+
+    .gallery {
+        padding: 20px; /* Kurangi padding untuk tampilan mobile */
+    }
+
+    .gallery h2 {
+        font-size: 20px; /* Sesuaikan ukuran font untuk tampilan mobile */
+    }
+
+    .gallery-container {
+        flex-direction: column; /* Ubah tata letak menjadi vertikal */
+    }
+
+    .gallery-item {
+        width: 100%; /* Sesuaikan lebar item galeri untuk tampilan mobile */
+        height: auto; /* Sesuaikan tinggi item galeri untuk tampilan mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .profile {
+        padding: 10px;
+    }
+
+    .gallery {
+        padding: 10px; /* Kurangi padding lebih lanjut untuk tampilan mobile */
+    }
+
+    .gallery h2 {
+        font-size: 18px; /* Sesuaikan ukuran font lebih lanjut untuk tampilan mobile */
+    }
+
+    .gallery-item {
+        width: 100%; /* Sesuaikan lebar item galeri lebih lanjut untuk tampilan mobile */
+        height: auto; /* Sesuaikan tinggi item galeri lebih lanjut untuk tampilan mobile */
+    }
+}
+
+.notes {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.p {
+    color: #2c2c2c;
+    text-decoration: none;
+}
+
